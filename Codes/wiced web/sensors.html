@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- 
+Displaying sensors data with gui.(accelerometer.temperature.humidity.pressure.magnetometer)
+Displaying navigation bar.
+
+-->
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>WICED</title>
+
+		<!-- Bootstrap Core CSS -->
+		<link href="common/css/bootstrap.min.css" rel="stylesheet">
+		<link href="common/css/full-slider.css" rel="stylesheet">
+		<link rel="stylesheet" href="common/css/style.css">
+		<link rel="stylesheet" type="text/css" href="cascadess/sensors.css">
+		<script src="javascript/sensors.js"></script>
+		<!-- Custom CSS -->
+		<!--<link href="css/full-slider.css" rel="stylesheet">-->
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body style="background-color:"">
+	       <!-- Navigation -->
+			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#4d0099">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>  
+		
+					</button>
+					<a class="navbar-brand" href="wiced.html"style="font-size:25px;color:white;font-family:serif">WICED</a>
+				</div>
+	
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="wiced.html"style="font-size:20px;color:white;font-family:san-serif"><span >Home</span></a></li>
+						<li><a href="sensors.html"style="font-size:20px;color:white;font-family:san-serif">SENSORS</a></li>
+						<li><a href="temp.html"style="font-size:20px;color:white;font-family:san-serif">TEMP NOTIFY</a></li>
+						<li><a href="bot.html"style="font-size:20px;color:white;font-family:san-serif">BOT SPEED</a></li>
+						<li><a href="mapping.html"style="font-size:20px;color:white;font-family:san-serif">MAPPING</a></li>
+						<li><a href="automation.html"style="font-size:20px;color:white;font-family:san-serif">AUTOMATION</a></li>
+						<li><a href="tutorials.html"style="font-size:20px;color:white;font-family:san-serif">TUTORIALS</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+          
+		<div class="container-fluid" style="">
+			<div class="row">
+				<div class="col-sm-8" >
+					<div class="row">
+					    <!--magnetometer compass gui  -->
+						<div class="col-sm-4" >
+							<div id="dial">
+								<div id="needle">
+									<div id="sneedle">
+									</div>
+								</div>
+								<h3 id="north">N</h3>
+								<h3 id="south">S</h3>
+								<h3 id="east">E</h3>
+								<h3 id="west">W</h3>
+							</div>
+							<h1 id="showdeg">???</h1> 
+						</div>
+						 <!--accelerometer gui  -->
+						<div class="col-sm-4" >
+							<div id="accscreen"> 
+								<div id="xaxis"> </div> 
+								<div id="yaxis"> </div>
+								<div id="ball"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-8" ></div>
+					</div>
+				</div>
+				<div class="col-sm-4" >
+					<div id="dd">
+					  <!--temperature gui  -->
+						<div id="aa">
+							<div id="inner"></div>
+						</div>
+						<div id="tempn"></div>
+						<div id="tempn1"></div>  
+						<div id="tempn2"></div>  
+						  <p id="t1">50</p>   
+						  <p id="t2">25</p>
+						  <p id="t3">1</p>     
+                         <!-- pressure gui -->
+						<div id="bb">
+							<div id="inner1"></div>
+						</div>
+						<div id="presn"></div>
+                        <div id="presn1"></div>  
+                        <div id="presn2"></div>   
+                        <p id="p1">1200</p>   
+						<p id="p2">1000</p>
+						<p id="p3">800</p>       
+                         <!--humidity gui  -->
+						<div id="cc">
+							<div id="inner2"></div>
+						</div>
+						<div id="humidn"></div>
+                        <div id="humidn1"></div>  
+                        <div id="humidn2"></div>  
+                        <p id="h1">100</p>   
+						<p id="h2">50</p>
+						<p id="h3">0</p>
+
+
+						<h4 id="tdisp">0</h4>
+						<h4 id="pdisp">0</h4>
+						<h4 id="hdisp">0</h4>
+    
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navigation -->
+
+		<!-- jQuery -->
+		<script src="common/js/jquery.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="common/js/bootstrap.min.js"></script>
+
+  
+
+	</body>
+
+</html>
