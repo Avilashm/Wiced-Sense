@@ -17,21 +17,32 @@ var datae = [];
 var i=0;
 var leftShaft = 0;
 var rightShaft =0;
+
+//set the serial port and parses the data up to 7 byte 
 var sp = new SerialPort("/dev/ttyUSB0", 
 	{
 		baudrate: 9600,
 		parser: SerialPort.parsers.byteLength(7)
 	});
-		sp.on('data', onData);
+		sp.on('data', onData);//calls the function onData whenever data is available to port ,
 
+
+
+
+
+/*
+function onData,
+input = d (serial data),
+output = leftShaft (encoder left value),rightShaft(encoder right value)
+logic= converts hex data to string,data are in three parts (start,left,right) so 1st index of array is left and other two are taken
+
+*/
 function onData(d)
 	{
 	
-		//var buff = new Buffer(d, 'utf8');
-		//var buffer_binary = new Buffer(d, 'hex')[1];
+		
 		buff = new Buffer(d, 'hex').toString('utf8');
-		//console.log(buff);
-	    //console.log(buffer_binary);
+		
 
 	    datae[i] = buff;
 	    i++;
@@ -67,6 +78,17 @@ Cylon.robot
     wiced: { driver: "wiced-sense" }
   },
 
+
+
+/*
+function display
+input = sensor data 
+output = query string of data
+logic = takes the data and converts it into query string
+		connects to the mysql database server 
+		sends the generated query string of data to a php page (test.php)via http post method
+
+*/
   display: function(err, data)
     {
 			    if (err) 
@@ -110,11 +132,13 @@ Cylon.robot
 		   		console.log(data1);
     },
 
+    
+//code inside work function runs continously.
   work: function(my) 
   {
           my.wiced.getData(function(err, data) 
           {
-            my.display(err, data);
+            my.display(err, data);//passes the sensors data to the display function
          
           });
   }
