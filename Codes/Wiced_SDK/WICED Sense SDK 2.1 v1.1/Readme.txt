@@ -1,0 +1,1 @@
+Place this folder in C:\Users\Admin\Documents\WICED\WICED-Smart-SDK-2.1.1\WICED-Smart-SDK\Apps
