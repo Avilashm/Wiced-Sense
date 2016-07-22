@@ -88,6 +88,10 @@ WICEDSense.prototype.getData = function(callback)
   );
 };
 
+/*
+   function input = data of wiced sense in a string each 2 byte
+   output     =  result (parsed every data and stored in an array data)
+*/
 WICEDSense.prototype._parseData = function(data) 
 {
       var bitMask = data[0],
