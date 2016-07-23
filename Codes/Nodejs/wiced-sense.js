@@ -112,7 +112,7 @@ logic = takes the data and converts it into query string
 				{
 				    host: 'localhost',
 				    port: 80,
-				    path: '/wiced/test.php?'+data1,
+				    path: '/wiced_web/controller/insert-data-to-db.php?'+data1,
 				    method: 'POST',
 				    headers: 
 				    {

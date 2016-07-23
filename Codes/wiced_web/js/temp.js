@@ -61,6 +61,6 @@ logic    = sets the threshold temperture via html form and submit it to test.php
 
 						}
 				};
-					xhttp.open("GET","/controller/new.php?q="+int,true);
+					xhttp.open("GET","/controller/select-data-from-db.php?q="+int,true);
 					xhttp.send();
         }

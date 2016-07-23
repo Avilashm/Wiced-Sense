@@ -186,7 +186,7 @@ logic    = function asynchronously (every 100ms) calls the new.php page for curr
 							  
 								}
 						};
-					xhttp.open("GET","/controller/new.php?q="+int,true);
+					xhttp.open("GET","/controller/select-data-from-db.php?q="+int,true);
 					xhttp.send();
 		}
           
