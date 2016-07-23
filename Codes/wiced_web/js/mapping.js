@@ -27,7 +27,7 @@
  olddecoder == is the very previous encoder value of bot ;
  newdecoder == is the very newest encoder vakue of bot;
  */
-setInterval("loadDoc(1)",10);
+setInterval("loadDoc(1)",100);
 
 var fixedaxis=100;
 var humid=0,pressure=0,temp=0;
@@ -290,7 +290,7 @@ logic    = function asynchronously (every 10ms) calls the new.php page for curre
 
 					}
 			};
-            xhttp.open("GET","/controller/select-data-from-db.php?q="+int,true);
+            xhttp.open("GET","controller/select-data-from-db.php?q="+int,true);
             xhttp.send();
     }
 

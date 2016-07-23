@@ -28,7 +28,7 @@
 			if ($conn->query($sql) === TRUE) 
 				{
    
-					header('Location:/wiced/view/temp.html');    
+					header('Location:/wiced_web/temp.html');    
 				} 
 
 

@@ -1,7 +1,7 @@
 //vriables == 
 //JSONObject[0]["twelve"]=== is the current temperature from database.
 var fixedtemp;
-setInterval("loadDoc(1) ",10);
+setInterval("loadDoc(1) ",100);
 
 /*
 function = loadDoc(int);
@@ -61,6 +61,6 @@ logic    = sets the threshold temperture via html form and submit it to test.php
 
 						}
 				};
-					xhttp.open("GET","/controller/select-data-from-db.php?q="+int,true);
+					xhttp.open("GET","controller/select-data-from-db.php?q="+int,true);
 					xhttp.send();
         }
